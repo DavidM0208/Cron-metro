@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vh;
+    background-image: linear-gradient(to right, #e72e2e, #9e9e9e);
+}
+
+.pantalla {
+    user-select: none; /* Esto es para que el usuario no pueda selecionar los números */
+}
+
+.cronometro .pantalla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: #53aee2;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 8px 5px #5c5b5b;
+    border: none;
+}
+
+.cronometro .pantalla span {
+    width: 100px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 550;
+    color: rgb(255, 255, 255);
+}
+
+.pantalla span.separador {
+    width: 10px;
+}
+
+.pantalla span.separador_mili, .pantalla span.milisegundo {
+    color: #8228d1;
+}
+
+.cronometro span.separador_mili {
+    width: 15px;
+    margin-right: -8px;
+}
+
+.milisegundo, .segundo, .minuto, .hora {
+    margin-right: -11px;
+}
+
+.cronometro .botones {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.botones button {
+    padding: 6px 16px;
+    outline: none;
+    border: none;
+    margin: 0px 10px;
+    color: rgb(0, 0, 0);
+    background: #e0d9db;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 0.9rem;
+    cursor: pointer;
+    box-shadow: 3px 4px 3px 0px #555555;
+}
+
+.iniciar:hover {
+    background: rgb(45, 226, 45);
+}
+
+.detener:hover {
+    background: yellow;
+}
+
+.reiniciar:hover {
+    background: red;
+}
+
+.botones button.on {
+    pointer-events: none;
+    opacity: 0.7;
+}
